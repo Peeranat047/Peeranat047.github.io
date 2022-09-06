@@ -1,0 +1,32 @@
+<div class="bgc">
+    <!-- <p>page1 works!</p> -->
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Input Student</mat-card-title>
+            <mat-card-subtitle>ป้อนข้อมูลนักศึกษา</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>First name</mat-label>
+                <input matInput (keyup)="fname($event)" #inputfname>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Last name</mat-label>
+                <input matInput (keyup)="lname($event)" #inputlname>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="primary" (click)="click_submit()">Submit</button>
+            <button mat-flat-button color="warn" (click)="click_reset()">Reset</button>
+        </mat-card-actions>
+    </mat-card>
+    <br>
+    <mat-card class="example-card">
+        <mat-card-content>
+            {{show_fname}} &nbsp; {{show_lname}}
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
